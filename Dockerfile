@@ -1,9 +1,8 @@
-FROM node:alpine AS deps
+FROM quay.io/ibmgaragecloud/node:lts-stretch
 WORKDIR /app
-COPY package*.json .
+COPY . .
 
 RUN npm install
-COPY . .
 
 RUN npm run build
 EXPOSE 3000
