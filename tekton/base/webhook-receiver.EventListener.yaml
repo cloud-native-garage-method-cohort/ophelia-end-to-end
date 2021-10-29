@@ -19,7 +19,7 @@ spec:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
       metadata:
-        generateName: express-sample-app-
+        generateName: next-app-
       spec:
         serviceAccountName: build-bot
         params:
