@@ -20,7 +20,7 @@ spec:
       schedulerName: default-scheduler
       containers:
       - name: next-app
-        image: quay.io/ophelia_huang/ophelia-kat-express
+        image: quay.io/ophelia_huang/next-app
         ports:
         - name: http
           protocol: TCP

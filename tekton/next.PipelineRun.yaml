@@ -8,7 +8,7 @@ spec:
     name: next-app
   params:
     - name: app-name
-      value: ophelia-kat-express
+      value: next-app
     - name: image-repo
       value: quay.io/ophelia_huang/next-app
     - name: source-repo
