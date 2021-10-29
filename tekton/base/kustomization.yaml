@@ -9,3 +9,5 @@ resources:
 - next.Pipeline.yaml
 - quay.Secret.yaml
 - webhook-receiver.EventListener.yaml
+- production-repository.ConfigMap.yaml
+- save-configuration.Task.yaml
