@@ -35,11 +35,11 @@ spec:
           - name: pipeline-shared-data
             volumeClaimTemplate:
               spec:
+                accessModes:
+                  - ReadWriteOnce
                 resources:
                   requests:
                     storage: 1Gi
-                accessModes:
-                  - ReadWriteOnce
           - name: gitops-repository
             volumeClaimTemplate:
               spec:
@@ -47,10 +47,11 @@ spec:
                   requests:
                     storage: 1Gi
                 accessModes:
-                - ReadWriteOnce
+                  - ReadWriteOnce
           - name: git-credentials
             secret:
               secretName: git-credentials
+
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding

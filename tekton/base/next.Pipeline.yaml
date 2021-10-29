@@ -74,7 +74,7 @@ spec:
       - name: app-name
         value: "$(params.app-name)"
       - name: sha
-        value: "$(tasks.clone-repository.results.commit)"
+        value: "$(tasks.git-clone.results.commit)"
     runAfter:
       - deploy
     taskRef:
@@ -87,7 +87,7 @@ spec:
       - name: git-credentials
         workspace: git-credentials
         
-workspaces:
-  - name: pipeline-shared-data
-  - name: gitops-repository
-  - name: git-credentials
+  workspaces:
+    - name: pipeline-shared-data
+    - name: gitops-repository
+    - name: git-credentials
