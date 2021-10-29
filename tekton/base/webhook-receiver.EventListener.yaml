@@ -24,7 +24,7 @@ spec:
         serviceAccountName: build-bot
         params:
           - name: app-name
-            value: ophelia-end-2-end
+            value: next-app
           - name: image-repo
             value: quay.io/ophelia_huang/next-app
           - name: source-repo
