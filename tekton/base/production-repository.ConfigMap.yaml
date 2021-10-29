@@ -6,4 +6,4 @@ data:
   branch: main
   host: github.com
   org: cloud-native-garage-method-cohort
-  repo: emea-7-production
+  repo: ophelia-git-ops
