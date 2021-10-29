@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: next-app-
+spec:
+  serviceAccountName: build-bot
+  pipelineRef:
+    name: next-app
+  params:
+    - name: app-name
+      value: ophelia-kat-express
+    - name: image-repo
+      value: quay.io/ophelia_huang/next-app
+    - name: source-repo
+      value: https://github.com/cloud-native-garage-method-cohort/ophelia-end-to-end.git
+  workspaces:
+  - name: pipeline-shared-data
+    volumeClaimTemplate:
+      spec:
+        accessModes:
+          - ReadWriteOnce 
+        resources:
+          requests:
+            storage: 1Gi
